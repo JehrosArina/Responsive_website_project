@@ -28,7 +28,9 @@ body{
    position: relative;
 }
 
-
+a{
+  text-decoration: none;
+}
 
 /* header start */
 
@@ -90,7 +92,7 @@ img{
     text-decoration: none;
 }
 
- #sign-up{
+.container #header #sign-up{
     color:colors.$darkGray9D9DB5;
 }
 
@@ -101,6 +103,7 @@ img{
    background:colors.$darkblue192140;
    color: colors.$Blue0266FF;
    border: 1px solid colors.$Blue0266FF ;
+   cursor: pointer;
 }
 /* underline animation using Psedu and set the parent container to realtive position */
 
@@ -152,6 +155,7 @@ main ol li{
   transition: all ease-in .3s;
   margin-bottom: 20px;
    width: 250px;
+
 }  
 
 
@@ -174,7 +178,8 @@ span{
   position: absolute;
   width: 250px;
   height:80px;
-  background-color: colors.$C0BFCF;
+  background-color: colors.$F8F9FC;
+
   top:100px;
  
 }
@@ -209,6 +214,7 @@ span{
   position: absolute;
   top:-7px;
   left:190px;
+  cursor: pointer;
 
 }
 
@@ -309,8 +315,8 @@ span{
 
 /* Media Queries */
 
-
-@media(max-width: 390px) {
+/* From 480px down to lower pixel size */
+@media(max-width: 480px) {
     
 
     /* navigation bar */
@@ -325,13 +331,27 @@ span{
   right: -300px;
   background: colors.$darkblue192140;
   height: 511vh;
-  width:200px;
+  width:220px;
   box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.1);
   padding:90px 0 0 20px;  /* navlinks to slide */
   transition: 0.4s;
 
 
 }
+
+
+
+#header{
+  height:70px;
+}
+ #header h1{
+left:25px;
+position: absolute;
+
+}
+
+
+
 
 
 #nav-bar li{
@@ -358,7 +378,8 @@ main ol{
 #mobile{
 display: flex; /* to display the hidden cart and bar */   
 position: absolute; 
-right: 15px;
+right: 20px;
+top:20px;
 }
 
 #mobile i{
@@ -375,13 +396,18 @@ right: 15px;
 }
 #close{
     position:absolute;
-    top:-330px;
+   top:-330px;
    left:20px;
-   font-weight: 600;
+   font-weight: 200;
    font-size: 24px;
    cursor: pointer;
    display: initial;   /* display flex*/
+   color:colors.$Blue0266FF;
+   
+  
 }
+ 
+
 
 
 
