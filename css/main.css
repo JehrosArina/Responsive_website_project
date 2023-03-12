@@ -1,0 +1,378 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap");
+/* variable for your properties and values */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth scroll;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* header start */
+.container #header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 80px;
+  background: #192140;
+  box-shadow: 5px 5px 15px rgb(127, 195, 195);
+  position: relative;
+  width: 1200px;
+  margin-top: 10px;
+}
+
+#header h1 {
+  color: #DCF10D;
+  font-size: 26px;
+}
+#header a {
+  text-decoration: none;
+}
+
+#mobile {
+  display: none;
+}
+
+#close {
+  display: none;
+}
+
+img {
+  width: 100px;
+  height: 80px;
+}
+
+#nav-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#nav-bar li {
+  list-style: none;
+  padding: 0 20px;
+  position: relative;
+}
+
+#nav-bar a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#sign-up {
+  color: #9D9DB5;
+}
+
+.login-btn {
+  height: 48px;
+  width: 86px;
+  border-radius: 40px;
+  background: #192140;
+  color: #0266FF;
+  border: 1px solid #0266FF;
+}
+
+/* underline animation using Psedu and set the parent container to realtive position */
+#nav-bar li a:hover,
+#nav-bar li a:active {
+  color: #DCF10D;
+}
+
+#nav-bar li a.active::after,
+#nav-bar li a:hover::after {
+  content: "";
+  width: 30%;
+  height: 2px;
+  background-color: #DCF10D;
+  position: absolute;
+  bottom: -5px;
+  left: 20px;
+  transition: 0.3s;
+}
+
+/* End of Navigation design */
+/*  MAIN STYLE */
+.main-container {
+  height: 100px;
+  width: 100%;
+  margin-top: 40px;
+}
+
+main ol {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* repeat(4, 1fr) it will be displayed 4 items in one column */
+  place-items: center;
+  gap: 10px;
+  margin-bottom: 50px;
+}
+
+ol {
+  list-style-type: none;
+}
+
+main ol li {
+  margin-bottom: 40px;
+}
+
+.list-items {
+  position: relative;
+  transition: all ease-in 0.3s;
+  margin-bottom: 20px;
+  width: 250px;
+}
+
+span {
+  position: absolute;
+  color: red;
+  font-weight: 800;
+  padding-left: 10px;
+  display: none;
+}
+
+.list-items:hover span {
+  display: block;
+  font-weight: 900;
+}
+
+.content-container {
+  position: absolute;
+  width: 250px;
+  height: 80px;
+  background-color: #C0BFCF;
+  top: 100px;
+}
+
+.content-image img {
+  width: 250px;
+  height: 150px;
+}
+
+.content-container p {
+  font-size: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  border-bottom: 1px solid rgb(162, 158, 158);
+}
+
+.fav-badge {
+  position: absolute;
+  width: 250px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 65px;
+  font-size: 10px;
+  margin-left: 10px;
+}
+
+.fav-heart {
+  position: absolute;
+  top: -7px;
+  left: 190px;
+}
+
+.status {
+  position: absolute;
+  top: -10px;
+  left: 5px;
+}
+
+.read {
+  position: absolute;
+  top: 20px;
+  left: -70px;
+  display: none;
+}
+
+.list-items:hover .read {
+  top: 9px;
+  display: block;
+}
+
+/* End of main styles */
+/* FOOTER */
+/* END OF FOOTER */
+/* Footer */
+.container.footer-section {
+  width: 1200px;
+  height: 274px;
+  background: #10131C;
+}
+
+.footer-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 8%;
+  margin-top: 50%;
+}
+
+.Blog-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.Blog-content h3 {
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.Blog-content a {
+  font-size: 12px;
+  color: #D7F8FF;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.follow-us p {
+  font-size: 12px;
+  font-weight: 400;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+}
+
+.fav-links i {
+  color: #ffffff;
+  padding: 0 10px;
+  padding-left: 10px;
+  font-size: 20px;
+}
+
+.fav-links p {
+  color: #ffffff;
+}
+
+/* End of footer */
+/* Media Queries */
+@media (max-width: 390px) {
+  /* navigation bar */
+  #nav-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: absolute;
+    top: 0;
+    right: -300px;
+    background: #192140;
+    height: 511vh;
+    width: 250px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+    padding: 90px 0 0 20px; /* navlinks to slide */
+    transition: 0.4s;
+  }
+  #nav-bar li {
+    margin-bottom: 25px;
+  }
+  #nav-bar.active {
+    z-index: 3;
+    right: 0px;
+  }
+  main ol {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* repeat(4, 1fr) it will be displayed 4 items in one column */
+    place-items: center;
+    gap: 10px;
+    padding-right: 25px;
+  }
+  #mobile {
+    display: flex; /* to display the hidden cart and bar */
+    position: absolute;
+    right: 15px;
+  }
+  #mobile i {
+    color: #0266FF;
+    font-size: 24px;
+  }
+  #mobile #mobile-cart {
+    color: #1a1a1a;
+    font-size: 24px;
+    padding-right: 10px;
+  }
+  #close {
+    position: absolute;
+    top: -330px;
+    left: 20px;
+    font-weight: 600;
+    font-size: 24px;
+    cursor: pointer;
+    display: initial; /* display flex*/
+  }
+  .container #header {
+    width: 400px;
+  }
+  .container .footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    margin-top: 120rem;
+    height: 450px;
+    background-color: #10131C;
+  }
+  .Blog-content {
+    padding-top: 20px;
+    width: 100%;
+  }
+  .Blog-content h3 {
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 700;
+  }
+  .Blog-content a {
+    font-size: 12px;
+    color: #D7F8FF;
+    font-weight: 400;
+    text-decoration: none;
+  }
+  .follow-us {
+    width: 100%;
+  }
+  .follow-us p {
+    font-size: 10px;
+    font-weight: 400;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  .fav-links {
+    display: flex;
+  }
+  .fav-links i {
+    color: #ffffff;
+    width: 100%;
+    font-size: 20px;
+    color: #ffffff;
+  }
+  .fav-links p {
+    color: #ffffff;
+  }
+}/*# sourceMappingURL=main.css.map */
