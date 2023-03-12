@@ -118,7 +118,7 @@ img {
 
 main ol {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* repeat(4, 1fr) it will be displayed 4 items in one column */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   place-items: center;
   gap: 10px;
   margin-bottom: 50px;
@@ -279,7 +279,7 @@ span {
     right: -300px;
     background: #192140;
     height: 511vh;
-    width: 250px;
+    width: 200px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
     padding: 90px 0 0 20px; /* navlinks to slide */
     transition: 0.4s;
